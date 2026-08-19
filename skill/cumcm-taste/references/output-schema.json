@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CUMCM Taste Method-Admission Report",
+  "type": "object",
+  "required": ["problem_reconstruction", "factor_decisions", "domain_research", "data_free_rehearsal", "method_admission"],
+  "properties": {
+    "problem_reconstruction": { "type": "object" },
+    "factor_decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["factor", "affected_output", "evidence", "decision", "reason"],
+        "properties": {
+          "factor": { "type": "string" },
+          "affected_output": { "type": "string" },
+          "direction_or_scale": { "type": "string" },
+          "evidence": { "type": "string" },
+          "decision": { "enum": ["must model", "test before omitting", "may omit", "unresolved"] },
+          "reason": { "type": "string" }
+        }
+      }
+    },
+    "domain_research": {
+      "type": "object",
+      "required": ["background_and_assumptions", "relevant_conclusions"]
+    },
+    "data_free_rehearsal": { "type": "object" },
+    "method_admission": {
+      "type": "object",
+      "required": ["recommended_minimal_model", "validity_range", "unresolved_risks", "upgrade_triggers"]
+    }
+  }
+}
+

@@ -1,0 +1,5 @@
+interface:
+  display_name: "CUMCM Taste"
+  short_description: "事实优先、方法后置的跨 Agent 数学建模审查工作流"
+  default_prompt: "Use $cumcm-taste to inspect the real-world facts, assumptions, and domain effects before choosing a model."
+
